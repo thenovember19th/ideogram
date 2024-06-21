@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{% static 'src/styles.css' %}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="h-[2000px] w-screen bg-white flex flex-row flex-wrap p-2 ">
+        <div class="flex flex-row mt-8">
+            <p class="absolute right-80 text-xl font-semibold">Upgrade Plan</p>
+            <img class="h-8 w-8 absolute right-64" src="{% static 'src\images\home-03-stroke-rounded.svg' %}" alt="">
+            <img class="h-8 w-8 absolute right-48" src="{% static 'src\images\notification-02-stroke-rounded.svg' %}" alt="">
+            <img class="h-8 w-8 absolute right-28" src="{% static 'src\images\settings-01-stroke-rounded.svg' %}" alt="">
+            <img class="h-8 w-8 absolute right-9 rounded-full" src="{% static 'src\images\image.jpg' %}" alt="">
+        </div>
+        <div class="flex flex-row mt-16 ml-28">
+            <img class="h-12 w-12 " src="{% static 'src\images\ideogram-removebg-preview.png' %}" alt="">
+            <h1 class="text-3xl font-semibold ml-2">ideogram</h1> <br>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class=" flex flex-row  mt-32 ml-28 ">
+                <input class="h-10 w-[900px] text-2xl ml-0 rounded-xl bg-white shadow-lg " type="text" placeholder="What do you want to create?" name="prompt">
+                <button class="bg-black absolute right-36 text-white text-2xl h-10 rounded-r-xl ">Generate</button>
+            </div>
+        </form>
+
+        <div class="flex flex-row justify-center items-center mt-64  bg-white h-14 w-[950px] absolute right-96 cursor-pointer">
+            <h1 class=" text-xl">Explore</h1>
+            <h2 class="text-xl ml-6">Following</h2>
+            <h3 class="text-xl ml-6">Top</h3>
+        </div>
+
+        <div class="h-[1500px] w-[1300px] bg-white relative mt-2 ml-28 flex justify-center flex-wrap flex-row p-10 gap-8 mb-3">
+            <div class="h-[500px] w-[380px] bg-white rounded-md flex flex-row flex-wrap shadow-lg">
+                <img class="h-[400px] w-[370px]" src="{{image}}" alt="">
+                <img class="rounded-full h-8 w-8 mt-3 flex flex-row"  src="{% static 'src\images\photo.avif' %}"  alt="">
+                <h1 class=" ">Cutegreen</h1>
+                <img class="ml-5" src="{% static 'src\images\more-horizontal-stroke-rounded.svg' %}" alt="">
+                <h2 class="ml-14 ">9</h2>
+                <img class="h-8 w-8  ml-28" src="{%static 'src\images\heart.png' %}" alt="">
+            </div>
+
+            <div class="h-[500px] w-[380px] bg-white rounded-md flex flex-row flex-wrap shadow-lg">
+                <img class="h-[400px] w-[370px]" src="{% static 'src\images\img2.webp' %}" alt="">
+                <img class="rounded-full h-8 w-8 mt-3 flex flex-row"  src="{% static 'src\images\pp1.jpg' %}"  alt="">
+                <h1 class=" ">Mccall</h1>
+                <img class="ml-5" src="{% static 'src\images\more-horizontal-stroke-rounded.svg' %}" alt="">
+                <h2 class="ml-14 ">3</h2>
+                <img class="h-8 w-8  ml-28" src="{%static 'src\images\heart.png' %}" alt="">
+            </div>
+
+            <div class="h-[550px] w-[390px] bg-white rounded-md flex flex-row flex-wrap shadow-lg">
+                <img class="h-[500px] w-[360px] p-3" src="{% static 'src\images\img3.webp' %}" alt="">
+                <img class="rounded-full h-8 w-8 mt-3 flex flex-row"  src="{% static 'src\images\photo.avif' %}"  alt="">
+                <h1 class=" ">deluxe_lemonade</h1>
+                <img class="ml-5" src="{% static 'src\images\more-horizontal-stroke-rounded.svg' %}" alt="">
+                <h2 class="ml-14 ">9</h2>
+                <img class="h-8 w-8  ml-20" src="{%static 'src\images\heart.png' %}" alt="">
+            </div>
+
+            <div class="h-[550px] w-[380px] bg-white rounded-md flex flex-row flex-wrap shadow-lg">
+                <img class="h-[500px] w-[370px] p-3" src="{% static 'src\images\img4.webp' %}" alt="">
+                <img class="rounded-full h-8 w-8 mt-3 flex flex-row"  src="{% static 'src\images\pp.jpg' %}"  alt="">
+                <h1 class=" ">luisarcy</h1>
+                <img class="ml-5" src="{% static 'src\images\more-horizontal-stroke-rounded.svg' %}" alt="">
+                <h2 class="ml-14 ">9</h2>
+                <img class="h-8 w-8  ml-28" src="{%static 'src\images\heart.png' %}" alt="">
+            </div>
+
+            <div class="h-[550px] w-[380px] bg-white rounded-md flex flex-row flex-wrap shadow-lg">
+                <img class="h-[500px] w-[360px] p-3" src="{% static 'src\images\img76.webp' %}" alt="">
+                <img class="rounded-full h-8 w-8 mt-3 flex flex-row"  src="{% static 'src\images\pp4.jpg' %}"  alt="">
+                <h1 class=" ">btittany</h1>
+                <img class="ml-5" src="{% static 'src\images\more-horizontal-stroke-rounded.svg' %}" alt="">
+                <h2 class="ml-14 ">9</h2>
+                <img class="h-8 w-8  ml-28" src="{%static 'src\images\heart.png' %}" alt="">
+            </div>
+
+            <div class="h-[550px] w-[380px] bg-white rounded-md flex flex-row flex-wrap shadow-lg">
+                <img class="h-[500px] w-[370px] p-3" src="{% static 'src\images\img7.webp' %}" alt="">
+                <img class="rounded-full h-8 w-8 mt-3 flex flex-row"  src="{% static 'src\images\unnamed.jpg' %}"  alt="">
+                <h1 class=" ">thaiblackcoffee</h1>
+                <img class="ml-5" src="{% static 'src\images\more-horizontal-stroke-rounded.svg' %}" alt="">
+                <h2 class="ml-14 ">9</h2>
+                <img class="h-8 w-8  ml-20" src="{%static 'src\images\heart.png' %}" alt="">
+            </div>
+            <div>
+                <img src="{{images.image}}">
+            </div>
+
+
+
+
+
+
+        </div>
+
+    </div>
+</body>
+</html>
